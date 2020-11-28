@@ -84,9 +84,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: url("../imgs/background34.png") repeat;
   color: #551A8B;
+  overflow-y: scroll;
 }
 
-a:active {
+a, a:active {
   color: #551A8B;
 }
 
@@ -136,6 +137,7 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   font-size: 25px;
 }
 
@@ -145,10 +147,14 @@ a:active {
           box-shadow: cornflowerblue 0px 0px 5px inset;
 }
 
-.container .menu__item a {
+.container .menu__item a, .container .menu__item .basket {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -157,6 +163,46 @@ a:active {
           align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.container .menu__down {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.container .menu__item:hover .menu__down {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-box-shadow: 0px 1px 5px 0 #8146b8;
+          box-shadow: 0px 1px 5px 0 #8146b8;
+}
+
+.container .menu__types {
+  width: 100%;
+  height: 1.6em;
+  background-color: #fff;
+  border: 1px #E3E0FF solid;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.container .menu__types:hover {
+  background-color: #f1f6ff;
+  -webkit-box-shadow: #d7e5ff 0px 0px 5px inset;
+          box-shadow: #d7e5ff 0px 0px 5px inset;
+}
+
+.container .menu .basket {
+  height: 15em;
 }
 
 .container .content {
@@ -186,8 +232,8 @@ a:active {
   height: 100%;
   width: 100%;
   position: relative;
-  -webkit-perspective: 500px;
-          perspective: 500px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
 }
 
 .container .content__card:first-child {
@@ -216,6 +262,7 @@ a:active {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-color: #E3E0FF;
+  border: 1px #bab3ff solid;
 }
 
 .container .content__front img {
@@ -240,14 +287,41 @@ a:active {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .container .content__back p {
   text-align: center;
 }
 
-.container .content__back p:first-child, .container .content__back p:last-child {
+.container .content__back p:first-child, .container .content__back p:nth-child(3) {
   font-size: 20px;
+}
+
+.container .content__back p:nth-child(3):after {
+  content: "\00A0\20BD";
+}
+
+.container .content__back .add {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 25%;
+  min-width: 25%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  background-color: #F0F8FF;
+  border: 1px #ced5db solid;
+}
+
+.container .content__back .add:hover {
+  background-color: #ecf4fc;
+}
+
+.container .content__back .add:active {
+  -webkit-box-shadow: #bfc8cf 0 0 5px inset;
+          box-shadow: #bfc8cf 0 0 5px inset;
 }
 
 .container .content__card:hover .content__front {
@@ -260,14 +334,20 @@ a:active {
           transform: rotateY(360deg);
 }
 
+.container .content__article {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .container .footer {
   background-color: #B2A8FF;
 }
 
 .container .footer__content {
   text-align: right;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
+  vertical-align: baseline;
+  font-family: "Courier New fnt";
+  font-size: 14px;
+  line-height: 25px;
   padding: 7px;
 }
