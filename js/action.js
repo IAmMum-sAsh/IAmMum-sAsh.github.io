@@ -1,7 +1,7 @@
-var arr = { 0: "Клубничный рожок/300", 1: "Рожок «Радуга»/270", 2: "Бананка/270" };
+var arr = { 0: "Клубничный рожок/300", 1: "Рожок «Радуга»/270", 2: "Бананка/270", 3: "Бетон/150" };
 var total = 0;
 var newBasket = new Map();
-newBasket.set("Клубничный рожок — 300", 0).set("Рожок «Радуга» — 270", 0).set("Бананка — 270", 0);
+newBasket.set("Клубничный рожок — 300", 0).set("Рожок «Радуга» — 270", 0).set("Бананка — 270", 0).set("Бетон — 150", 0);
 
 function add(item) {
     let tmp = arr[item].split('/');
@@ -28,7 +28,9 @@ function add(item) {
 
     let right = document.getElementById("right");
     right.innerHTML = `${total}`;
+}
 
-
-
+function toWEB() {
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', 'width=1200');
 }
