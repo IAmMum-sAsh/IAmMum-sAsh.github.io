@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: url("../imgs/background34.png") repeat;
   color: #551A8B;
+  font-family: 'Courier New fnt';
   overflow-y: scroll;
 }
 
@@ -102,7 +103,6 @@ a, a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Courier New fnt';
 }
 
 .container .menu {
@@ -202,7 +202,52 @@ a, a:active {
 }
 
 .container .menu .basket {
-  height: 15em;
+  height: 20em;
+  text-align: center;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 15px 5px;
+  background-color: #fff;
+}
+
+.container .menu .basket:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .menu .basket__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 80%;
+          flex: 1 0 80%;
+  overflow: auto;
+}
+
+.container .menu .basket__main p {
+  margin: 10px 0;
+}
+
+.container .menu .basket__right:after {
+  content: "\20BD";
+}
+
+.container .menu .basket__total {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  margin-top: 15px;
+}
+
+.container .menu .basket__left, .container .menu .basket__right {
+  display: inline-block;
 }
 
 .container .content {
@@ -299,7 +344,7 @@ a, a:active {
 }
 
 .container .content__back p:nth-child(3):after {
-  content: "\00A0\20BD";
+  content: "\20BD";
 }
 
 .container .content__back .add {
@@ -341,13 +386,93 @@ a, a:active {
 
 .container .footer {
   background-color: #B2A8FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 60px;
 }
 
-.container .footer__content {
-  text-align: right;
-  vertical-align: baseline;
-  font-family: "Courier New fnt";
-  font-size: 14px;
-  line-height: 25px;
-  padding: 7px;
+.container .footer h1 {
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.container .footer h1:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 45%;
+  height: 2px;
+  background: #E3E0FF;
+}
+
+.container .footer__block {
+  font-size: 15px;
+  line-height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+}
+
+.container .footer__block_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.container .footer__block_double {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0;
+}
+
+.container .footer a:hover {
+  color: #E3E0FF;
+}
+
+.container .footer__comm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3px 0;
+  position: relative;
+}
+
+.container .footer img {
+  display: block;
+  max-height: 25px;
+  max-width: 25px;
+  margin-right: 15px;
 }

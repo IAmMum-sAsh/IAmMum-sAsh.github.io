@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Просрочка</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src=""></script>
+    <script src="/js/action.js"></script>
     <link rel="shortcut icon" href="/imgs/favicon.png" type="image/png">
 </head>
 
@@ -39,7 +39,16 @@
                 <p><img src="/imgs/basket x 100.png" alt=""></p>
                 <div class="menu__down">
                     <div class="menu__types basket">
-                        <p>Корзина пуста</p>
+                        <div class="basket__main">
+                            <p class="start" id="start">Корзина пуста</p>
+                            <p id="stop"></p>
+                        </div>
+                        <div class="basket__total">
+                            <div class="basket__left">
+                                Итог:
+                            </div>
+                            <div class="basket__right" id="right">0</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,8 +63,8 @@
                     <div class="content__back">
                         <p>Рожок «Радуга»</p>
                         <p>Всё натурально!</p>
-                        <p>ваша<br>ориентация</p>
-                        <input type="button" class="add" value="Добавить">
+                        <p>270</p>
+                        <input type="button" class="add" value="Добавить" onclick="add(1)">
                     </div>
                 </div>
                 <div class="content__card">
@@ -65,9 +74,29 @@
                     <div class="content__back">
                         <p>Клубничный рожок</p>
                         <p>Самый вкусный в вашей жизни!</p>
-                        <p>бесценен</p>
-                        <input type="button" class="add" value="Добавить">
+                        <p>300</p>
+                        <input type="button" class="add" value="Добавить" onclick="add(0)">
                     </div>
+                </div>
+                <div class="content__card">
+                    <div class="content__front">
+                        <img src="" alt="">
+                    </div>
+                    <div class="content__back"></div>
+                </div>
+            </div>
+            <div class="content__row">
+                <div class="content__card">
+                    <div class="content__front">
+                        <img src="" alt="">
+                    </div>
+                    <div class="content__back"></div>
+                </div>
+                <div class="content__card">
+                    <div class="content__front">
+                        <img src="" alt="">
+                    </div>
+                    <div class="content__back"></div>
                 </div>
                 <div class="content__card">
                     <div class="content__front">
@@ -79,8 +108,59 @@
         </div>
 
         <div class="footer">
-            <div class="footer__content">
-                &#169; <a href="https://vk.com/sahbdexhuk" target="_blank"><img src="/imgs/vk x 25.png" alt=""></a>
+            <!-- Иконочки от Tilda Publishing https://tilda.cc -->
+            <div class="footer__block">
+                <h1>Быстрая навигация</h1>
+                <ul>
+                    <li><a href="index.html">Меню</a>
+                        <ul style="display: block; padding-left: 15px; line-height: 16px;">
+                            <li><a href="index.html">Рожки</a></li>
+                            <li><a href="eskimo.html">Эскимо</a></li>
+                            <li><a href="cups.html">Стаканчики</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="deliver.html">Доставка</a></li>
+                    <li><a href="about.html">О магазине</a></li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <div class="footer__block_center">
+                    <div class="footer__block">
+                        <h1>Управление версиями</h1>
+                        <div class="footer__block_double">
+                            <img src="/imgs/Tilda_Icons_40_IT_website.svg" alt="">
+                            <img src="/imgs/Tilda_Icons_40_IT_app.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="footer__block">
+                        <h1>Ещё немного ссылок</h1>
+                        <div class="footer__block_double">
+                            <a href="https://vk.com/sahbdexhuk" target="_blank"><img src="/imgs/vk x 200.png"
+                                    alt=""></a>
+                            <a href="https://www.mirea.ru/" target="_blank"><img src="/imgs/MIREA_Gerb_Colour x 200.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__block">
+                <h1>Обратная связь</h1>
+                <div class="footer__comm">
+                    <img src="/imgs/Tilda_Icons_15re_man.svg" alt="">
+                    <p>Витухина Наталья Александровна</p>
+                </div>
+                <div class="footer__comm">
+                    <img src="/imgs/Tilda_Icons_15re_location.svg" alt="">
+                    <p>ФГБОУ ВО РТУ МИРЭА, Проспект Вернадского 78, Москва, Россия</p>
+                </div>
+                <div class="footer__comm">
+                    <img src="/imgs/Tilda_Icons_40_IT_call.svg" alt="">
+                    <p><a href="tel:89670765736">+7(967)076-57-36</a></p>
+                </div>
+                <div class="footer__comm">
+                    <img src="/imgs/Tilda_Icons_40_IT_letter.svg" alt="">
+                    <p><a href="mailto:vituchina11natasha11@gmail.com">vituchina11natasha11@gmail.com</a></p>
+                </div>
             </div>
         </div>
     </div>
