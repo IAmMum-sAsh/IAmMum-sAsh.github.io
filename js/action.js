@@ -30,7 +30,14 @@ function add(item) {
     right.innerHTML = `${total}`;
 }
 
+
+
 function toWEB() {
     var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=1200');
+    viewport.setAttribute('content', 'width=1280');
+}
+
+function toAPP() {
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', 'width=480');
 }
