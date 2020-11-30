@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" id="vp" content="width=device-width, initial-scale=1">
     <title>О магазине</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="/js/action.js"></script>
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/png">
+    <script src="/js/action.js"></script>
+    <link rel="stylesheet" type="text/css" media="(max-width: 639px)" href="/css/mobile.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 640px) and (max-width: 1023px)" href="/css/tab.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 1024px)" href="/css/web.css">
 </head>
 
 <body>
@@ -63,13 +66,13 @@
                     Разработка клиентских частей интернет ресурсов и теме
                     «Магазин мороженого».</p><br>
                 <p>Корзина работает в пределах одной сессии страницы, так как работа не предусматривает серверной части.
-                </p><br>
-                <p>Сломала мобильную версию... &#x2639;</p>
+                </p>
             </div>
         </div>
 
         <div class="footer">
             <!-- Иконочки от Tilda Publishing https://tilda.cc -->
+            <!-- <div class="footer__mobile"> -->
             <div class="footer__block">
                 <h1>Быстрая навигация</h1>
                 <ul>
@@ -89,8 +92,8 @@
                     <div class="footer__block">
                         <h1>Управление версиями</h1>
                         <div class="footer__block_double">
-                            <img src="/imgs/Tilda_Icons_40_IT_website.svg" alt="">
-                            <img src="/imgs/Tilda_Icons_40_IT_app.svg" alt="">
+                            <img src="/imgs/Tilda_Icons_40_IT_website.svg" alt="" onclick="toWEB()">
+                            <img src="/imgs/Tilda_Icons_40_IT_app.svg" alt="" onclick="toAPP()">
                         </div>
                     </div>
                     <div class="footer__block">
@@ -104,6 +107,7 @@
                     </div>
                 </div>
             </div>
+            <!-- </div> -->
             <div class="footer__block">
                 <h1>Обратная связь</h1>
                 <div class="footer__comm">

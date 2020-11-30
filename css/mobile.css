@@ -20,6 +20,37 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  min-height: 200px;
+}
+
+.container .menu__item {
+  height: 50px;
+  background-color: #B2A8FF;
+}
+
+.container .menu__item p {
+  display: block;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .menu__item img {
+  display: block;
+  height: 44px;
+  width: auto;
+  margin: 3px;
+}
+
+.container .menu .basket {
+  height: 10em;
 }
 
 .container .content__row {
@@ -52,6 +83,10 @@
 
 .container .content__back .add {
   height: 30%;
+}
+
+.container .content__article {
+  margin: 20px 10px;
 }
 
 .container .footer {

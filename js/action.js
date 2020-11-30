@@ -34,10 +34,24 @@ function add(item) {
 
 function toWEB() {
     var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=1280');
+
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+        viewport.setAttribute('content', 'width=device-width');
+        //alert("И так web");
+    } else {
+        viewport.setAttribute('content', 'width=1280px');
+        //alert("Теперь 1280px");
+    }
 }
 
 function toAPP() {
     var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=480');
+
+    if (window.matchMedia("(max-width: 639px)").matches) {
+        viewport.setAttribute('content', 'width=device-width');
+        //alert("И так mobile");
+    } else {
+        viewport.setAttribute('content', 'width=425px');
+        //alert("Теперь 425px");
+    }
 }
