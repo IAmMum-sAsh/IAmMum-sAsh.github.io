@@ -260,9 +260,9 @@ a, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin: 10px 0;
   height: 200px;
 }
@@ -381,6 +381,23 @@ a, a:active {
 .container .content__article {
   text-align: center;
   margin: 15px 0;
+}
+
+.container .content__article p {
+  margin-bottom: 10px;
+}
+
+.container .content__article p:last-child {
+  margin: 0;
+}
+
+.container .content__article p.right {
+  text-align: right;
+}
+
+.container .content__article p img {
+  max-height: 100px;
+  width: auto;
 }
 
 .container .footer {
