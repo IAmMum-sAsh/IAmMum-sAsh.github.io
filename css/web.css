@@ -276,8 +276,8 @@ a, a:active {
   height: 100%;
   width: 100%;
   position: relative;
-  -webkit-perspective: 800px;
-          perspective: 800px;
+  -webkit-perspective: 1100px;
+          perspective: 1100px;
 }
 
 .container .content__card:first-child {

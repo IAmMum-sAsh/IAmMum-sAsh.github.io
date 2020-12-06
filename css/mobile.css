@@ -45,16 +45,16 @@
 
 .container .menu__item img {
   display: block;
-  height: 44px;
+  height: 42px;
   width: auto;
-  margin: 3px;
+  margin: 4px;
 }
 
 .container .menu .basket {
   height: 10em;
 }
 
-.container .menu .basket__main .no {
+.container .menu .basket__main #start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
